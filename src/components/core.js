@@ -50,7 +50,7 @@ export default function Core() {
                 {
                     cards.map((card,i)=>(
                         <div key={i} className="card" style={card2} >
-                            <img src={card.img}/>
+                            <img src={card.img} alt="images"/>
                             <h3>{card.name}</h3>
                             <p>{card.title}</p>
                         </div>
