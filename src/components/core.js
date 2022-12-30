@@ -5,39 +5,39 @@ export default function Core() {
         {
             title: "Genera Secretary",
             name: "Akshat Aggarwal",
-            img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FImage&psig=AOvVaw0_PDIg8MxrPpQfuPIFe6XT&ust=1672438935788000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCND749bun_wCFQAAAAAdAAAAABAE"
+            img: "./images/image.jpg"
         },
         {
             title: "Chief Secretary",
             name: "Vishnu Tandon",
-            img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FImage&psig=AOvVaw0_PDIg8MxrPpQfuPIFe6XT&ust=1672438935788000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCND749bun_wCFQAAAAAdAAAAABAE"
+            img: "./images/image.jpg"
         },
         {
             title:"Joint Secretary",
             name: "Gulshan Kumar Mehta",
-            img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FImage&psig=AOvVaw0_PDIg8MxrPpQfuPIFe6XT&ust=1672438935788000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCND749bun_wCFQAAAAAdAAAAABAE"
+            img: "./images/image.jpg"
         },
         {
             title: "Vice Secretary",
             name: "Sneha Mehta",
-            img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FImage&psig=AOvVaw0_PDIg8MxrPpQfuPIFe6XT&ust=1672438935788000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCND749bun_wCFQAAAAAdAAAAABAE"
+            img: "./images/image.jpg"
         },
         
         {
             title: "Regent Secretary",
             name: "Kunwar Prarup Yash",
-            img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FImage&psig=AOvVaw0_PDIg8MxrPpQfuPIFe6XT&ust=1672438935788000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCND749bun_wCFQAAAAAdAAAAABAE"
+            img: "./images/image.jpg"
         },
         
         {
             title: "Deputy Regent Secretary",
             name: "Shubhangi Pandey",
-            img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FImage&psig=AOvVaw0_PDIg8MxrPpQfuPIFe6XT&ust=1672438935788000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCND749bun_wCFQAAAAAdAAAAABAE"
+            img: "./images/image.jpg"
         },
         {
             title: "Deputy Regent Secretary",
             name: "Shubham Satyam Dubey",
-            img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FImage&psig=AOvVaw0_PDIg8MxrPpQfuPIFe6XT&ust=1672438935788000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCND749bun_wCFQAAAAAdAAAAABAE"
+            img: "./images/image.jpg"
         }
         
     ]);
@@ -50,9 +50,12 @@ export default function Core() {
                 {
                     cards.map((card,i)=>(
                         <div key={i} className="card" style={card2} >
-                            <img src={card.img} alt="images"/>
-                            <h3>{card.name}</h3>
-                            <p>{card.title}</p>
+                            <img src={card.img} alt="images" style={image1}/>
+                            <div className='info' style={info}>
+                                <h3>{card.name}</h3>
+                                <p>{card.title}</p>
+                            </div>
+                            
                         </div>
                     ))
                 }    
@@ -65,23 +68,23 @@ export default function Core() {
 }
 
 const container={
-    maxWidth: "1100px",
-    width: "100%",
-    margin: "auto",
-    marginBottom: "30px",
+    maxWidth: "960px",
+    margin: "0px auto 20px auto",
     display: "block",
+    backgroundColor:"gold" 
    
 }
 
 const heading={
    fontSize: "40px",
    textAlign: "center",
-   padding: "20px",
+   padding: "15px",
    color: "red"
 }
 const card1={
    display: "flex",
    flexWrap: "wrap",
+   objectFit: "fill",
    justifyContent: "spacearound"
 
 }
@@ -89,16 +92,27 @@ const card1={
 const card2={
    backgroundColor: "lightgrey",
    cursor: "pointer",
-   marginLeft: "auto",
-   marginRight: "auto",
-   marginBottom: "20px",
+   margin: "0px auto 100px auto",
    textAlign: "center",
    borderRadius: "100px 100px 0px 0px",
-   margin: "auto",
-   height: "280px",
-   width: "250px"
+   height: "250px",
+   width: "200px"
 }
 
+const info={
+    textAlign: "center",
+    lineHeight: "0.5",
+    fontSize: "12px",
+    fontFamily: "Arial, Helvetica, sans-serif ",
+    
+    
+}
+ const image1={
+    width: "200px",
+    height: "250px",
+    borderRadius: "100px 100px 0px 0px",
+   
+ }
 
 
 
